@@ -8,7 +8,7 @@ p, .markdown {
 }
 
 .markdown p {
-  margin-bottom: 1.4em;
+  margin-bottom: 1.6em;
 }
 
 p img {
@@ -41,6 +41,14 @@ p img {
 
 .hero-foot hr:first-child {
  margin-top: 0px;
+}
+
+.product .content {
+  text-align: center;
+}
+
+a.product {
+  display: inline-block;
 }
 
 .price::before {
@@ -131,6 +139,14 @@ p img {
     margin-right: 15px;
 }
 
+.button:hover, .button:hover, .nav-item:hover  {
+  transform: scale(1.15);
+}
+
+.social-icons a.circular i.fa:hover {
+  transform: scale(1.15);
+}
+
 .social-icons a.circular i.fa {
     display: inline-block;
     border-radius: 60px;
@@ -145,6 +161,10 @@ p img {
 
 .modal-background {
   background-color: rgba(255, 255, 255, .95);
+}
+
+.modal-card {
+  overflow: auto;
 }
 
 .description {
@@ -178,6 +198,15 @@ p img {
   text-align: center;
 }
 
+.blog p, .markdown p, .markdown {
+  line-height: 2em;
+  font-size: 19px;
+}
+
+.blog p strong {
+  font-size: 1.5em;
+}
+
 .blog-share {
   line-height: 30px;
   margin-top: 10px;
@@ -186,4 +215,91 @@ p img {
 .blog-share .fa {
   font-size: 32px;
   padding-left: 11px;
+}
+
+.post-item {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+/* Box-sizing reset: http://w3bits.com/?p=3225 */
+.products {
+  box-sizing: border-box;
+}
+
+.product .content {
+  color: #00b8d4
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* The Masonry Container */
+.masonry {
+  margin: 1.5em auto;
+  max-width: 1000px;
+  column-gap: 1.5em;
+}
+
+/* The Masonry Brick */
+.masonry .item {
+  background: #fff;
+  padding: 1em;
+  margin: 0 0 1.5em;
+}
+
+#store .title {
+   margin: 3.0rem 0;
+}
+
+#footer {
+  font-size: 2em;
+}
+
+.nav-item {
+  font-size: 1.3em;
+}
+
+/* Masonry on large screens */
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+/* Masonry on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+/* Masonry on small screens */
+@media only screen and (max-width: 767px) {
+  .masonry {
+    column-count: 2;
+    margin: 0 0 1.0em
+  }
+
+  .masonry .item {
+    background: #fff;
+    padding: 1em;
+    margin: 0 0 1.0em;
+  }
+}
+
+@media only screen and (min-width: 680px) {
+  .store-header .nav-center {
+    /* column-count: 2; */
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 100px;
+    -moz-column-width: 100px;
+    column-width: 100px;
+    display: block;
+  }
 }
