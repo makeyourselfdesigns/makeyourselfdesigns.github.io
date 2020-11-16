@@ -1,14 +1,26 @@
 window.onload = function() {
-  let form = document.querySelector("form.subscribe")
+  let forms = document.querySelectorAll("form.subscribe")
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  forms.forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    fetch(form.action, {
-      method: form.method,
-      body: new FormData(form)
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form)
+      })
+
+      form.classList.add("success")
     })
+  })
 
-    form.classList.add("success")
+  let toggles = document.querySelectorAll(".show-modal")
+
+  toggles.forEach((toggle) => {
+    toggle.addEventListener('click', event => {
+      event.preventDefault();
+
+      $(".modal").modal('show');
+    })
   })
 }
